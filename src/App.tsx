@@ -15,7 +15,9 @@ const App = () => {
   useEffect(() => {
     socket.on("moveMade", (data) => {
       setGame(data.updatedGame);
-      setPlayerTurn(data.updatedGame.currentPlayer);
+      setPlayerTurn(
+        data.updatedGame.currentPlayer === "X" ? "Player A" : "Player B"
+      );
       setErrorMessage("");
     });
 
