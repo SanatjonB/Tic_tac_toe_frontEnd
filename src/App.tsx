@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./index.css";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://tictaconline.vercel.app");
 
 const App = () => {
   const [game, setGame] = useState({
